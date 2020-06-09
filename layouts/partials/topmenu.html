@@ -1,0 +1,90 @@
+<nav id="site-nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+ <!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+ <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+   <span class="sr-only">Toggle navigation</span>
+   <span class="icon-bar"></span>
+   <span class="icon-bar"></span>
+   <span class="icon-bar"></span>
+ </button>
+ <a class="navbar-brand" href="{{ site.BaseURL }}">{{ .Site.Title }}</a>
+</div>
+
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+ <ul class="nav navbar-nav">
+   <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown">The Game <b class="caret"></b></a>
+     <ul class="dropdown-menu">
+       <li><a href="{{ site.BaseURL }}/introduction">Introduction</a></li>
+        <li><a href="{{ site.BaseURL }}/playing_the_game">Playing the Game</a></li>
+        <li><a href="{{ site.BaseURL }}/example">Example of Play</a></li>
+        <li><a href="{{ site.BaseURL }}/character_creation">Character Creation</a></li>
+        <li><a href="{{ site.BaseURL }}/moves">Moves</a></li>
+        <li><a href="{{ site.BaseURL }}/equipment">Equipment</a></li>
+       <li class="divider"></li>
+        <li><a href="{{ site.BaseURL }}/moves_discussion">Discussion - Moves</a></li>
+     </ul>
+   </li>
+   <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Classes <b class="caret"></b></a>
+     <ul class="dropdown-menu">
+        <li><a href="{{ site.BaseURL }}/classes/bard">Bard</a></li>
+        <li><a href="{{ site.BaseURL }}/classes/cleric">Cleric</a></li>
+        <li><a href="{{ site.BaseURL }}/classes/druid">Druid</a></li>
+        <li><a href="{{ site.BaseURL }}/classes/fighter">Fighter</a></li>
+        <li><a href="{{ site.BaseURL }}/classes/paladin">Paladin</a></li>
+        <li><a href="{{ site.BaseURL }}/classes/ranger">Ranger</a></li>
+        <li><a href="{{ site.BaseURL }}/classes/thief">Thief</a></li>
+        <li><a href="{{ site.BaseURL }}/classes/wizard">Wizard</a></li>
+       <li class="divider"></li>
+        <li><a href="{{ site.BaseURL }}/classes/cleric/spells">Cleric Spells</a></li>
+        <li><a href="{{ site.BaseURL }}/classes/wizard/spells">Wizard Spells</a></li>
+       <li class="divider"></li>
+        <li><a href="{{ site.BaseURL }}/classes/class_moves_discussion">Discussion - Class Moves</a></li>
+     </ul>
+   </li>
+   <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown">GM Section <b class="caret"></b></a>
+     <ul class="dropdown-menu">
+        <li><a href="{{ site.BaseURL }}/gm/basics">Basics</a></li>
+        <li><a href="{{ site.BaseURL }}/gm/first_session">First Session</a></li>
+        <li><a href="{{ site.BaseURL }}/gm/fronts">Fronts</a></li>
+        <li><a href="{{ site.BaseURL }}/gm/the_world">The World</a></li>
+        <li><a href="{{ site.BaseURL }}/gm/advanced_delving">Advanced Delving</a></li>
+     </ul>
+   </li>
+   <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Monsters <b class="caret"></b></a>
+     <ul class="dropdown-menu">
+        <li><a href="{{ site.BaseURL }}/monsters/overview">Overview</a></li>
+       <li class="divider"></li>
+         <li><a href="{{ site.BaseURL }}/monsters/caverns">Cavern Dwellers</a> </li>
+         <li><a href="{{ site.BaseURL }}/monsters/folk">Folk of the Realm</a> </li>
+         <li><a href="{{ site.BaseURL }}/monsters/woods">Gnarled Woods</a> </li>
+         <li><a href="{{ site.BaseURL }}/monsters/undead">Legions of the Undead</a> </li>
+         <li><a href="{{ site.BaseURL }}/monsters/depths">Lower Depths</a> </li>
+         <li><a href="{{ site.BaseURL }}/monsters/planes">Planar Powers</a> </li>
+         <li><a href="{{ site.BaseURL }}/monsters/hordes">Ravenous Hordes</a> </li>
+         <li><a href="{{ site.BaseURL }}/monsters/swamp">Swamp Denizens</a> </li>
+         <li><a href="{{ site.BaseURL }}/monsters/experiments">Twisted Experiments</a> </li>
+     </ul>
+     <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Appendices <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+           <li><a href="{{ site.BaseURL }}/appendices/conversion">Conversion</a></li>
+           <li><a href="{{ site.BaseURL }}/appendices/teaching">Teaching the Game</a></li>
+           <li><a href="{{ site.BaseURL }}/appendices/npcs">NPCs</a></li>
+        </ul>
+     </li>
+   </li>
+ </ul>
+ <form class="navbar-form navbar-left" role="search" method="get" id="search" action="http://duckduckgo.com/">
+    <input type="hidden" name="sites"value="{{ site.BaseURL }}"/>
+      <div class="form-group">
+         <input type="text" class="form-control" name="q" maxlength="255" placeholder="Search"/>
+      </div>
+      <input type="submit" value="DuckDuckGo Search" style="display:none;" />
+ </form>
+</div><!-- /.navbar-collapse -->
+</nav>

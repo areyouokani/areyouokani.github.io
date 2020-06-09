@@ -1,13 +1,12 @@
-{{ $baseurl := .Site.BaseUrl }}
 <!DOCTYPE html>
 <html lang="en">
   <head>
   <title>{{ .Title }} | {{ .Site.Title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="{{ $baseurl }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ $baseurl }}/css/sticky-footer.css" rel="stylesheet">
-    <link href="{{ $baseurl }}/css/site.css" rel="stylesheet">
+    <link href="{{ site.BaseURL }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ site.BaseURL }}/css/sticky-footer.css" rel="stylesheet">
+    <link href="{{ site.BaseURL }}/css/site.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,23 +17,23 @@
   </head>
   <body data-spy="scroll" data-target="#sidemenu">
   <div id="wrap">
-   {{ template "chrome/topmenu.html" . }}
+   {{ partial "topmenu.html" . }}
     <div class="container">
        <div class="row">
-            {{ template "chrome/sidemenu.html" . }}
+            {{ partial "sidemenu.html" . }}
           <div class="col-md-6 col-md-offset-1">
              {{ .Content }}
           </div>
        </div>
     </div>
  </div>
-      {{ template "chrome/footer.html" . }}
+      {{ partial "footer.html" . }}
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="{{ $baseurl }}/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{ site.BaseURL }}/bootstrap/js/bootstrap.min.js"></script>
     <script>
       $("#sidemenu-topnav").addClass('currentul');
       $("#sidemenu").prepend("<h3>Contents</h3>");
@@ -49,7 +48,7 @@
          var prevtag = nexttags.first().prop("tagName");
          */
          $("ul.currentul").append("<li class='currentli'><a id='link" + i + "' href='#title" +
-            i + "' title='" + tag + "'>" + 
+            i + "' title='" + tag + "'>" +
             current.html() + "</a></li>");
       });
     </script>
